@@ -83,7 +83,7 @@
       <material name="Material.001"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
       <geometry>
-        <mesh filename="package://ratze_description/meshes/stl/base.stl" scale="1.00000 1.00000 1.00000"/>
+        <mesh filename="package://ratze_description/meshes/stl/base.007.stl" scale="1.00000 1.00000 1.00000"/>
       </geometry>
     </visual>
   </link>
@@ -108,10 +108,10 @@
       <mass value="0.05000"/>
     </inertial>
     <visual name="wheel_2">
-      <material name="Material.002"/>
-      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+      <material name="Blue"/>
+      <origin rpy="1.57080 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
       <geometry>
-        <mesh filename="package://ratze_description/meshes/stl/wheel_2.stl" scale="1.00000 1.00000 1.00000"/>
+        <mesh filename="package://ratze_description/meshes/stl/Cylinder.001.stl" scale="0.84999 0.84999 0.10948"/>
       </geometry>
     </visual>
   </link>
@@ -128,10 +128,10 @@
       <mass value="0.05000"/>
     </inertial>
     <visual name="wheel_3">
-      <material name="Material.002"/>
-      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+      <material name="Blue"/>
+      <origin rpy="1.57080 0.00000 0.00000" xyz="-0.00000 0.00000 0.00000"/>
       <geometry>
-        <mesh filename="package://ratze_description/meshes/stl/wheel_3.stl" scale="1.00000 1.00000 1.00000"/>
+        <mesh filename="package://ratze_description/meshes/stl/Cylinder.003.stl" scale="0.84999 0.84999 0.10948"/>
       </geometry>
     </visual>
   </link>
@@ -148,10 +148,10 @@
       <mass value="0.05000"/>
     </inertial>
     <visual name="wheel_4">
-      <material name="Material.002"/>
-      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+      <material name="Blue"/>
+      <origin rpy="1.57080 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
       <geometry>
-        <mesh filename="package://ratze_description/meshes/stl/wheel_4.stl" scale="1.00000 1.00000 1.00000"/>
+        <mesh filename="package://ratze_description/meshes/stl/Cylinder.002.stl" scale="0.84999 0.84999 0.10948"/>
       </geometry>
     </visual>
   </link>
@@ -168,10 +168,10 @@
       <mass value="0.05000"/>
     </inertial>
     <visual name="wheel_1">
-      <material name="Material.002"/>
-      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+      <material name="Blue"/>
+      <origin rpy="1.57080 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
       <geometry>
-        <mesh filename="package://ratze_description/meshes/stl/wheel_1.stl" scale="1.00000 1.00000 1.00000"/>
+        <mesh filename="package://ratze_description/meshes/stl/Cylinder.stl" scale="0.84999 0.84999 0.10948"/>
       </geometry>
     </visual>
   </link>
@@ -179,10 +179,10 @@
   <link name="ray_2_link"/>
   <link name="ray_3_link"/>
   <link name="ray_4_link"/>
+  <material name="Blue">
+    <color rgba="0.03922 0.10588 0.30196 1.00000"/>
+  </material>
   <material name="Material.001">
     <color rgba="0.45098 0.45098 0.45098 1.00000"/>
-  </material>
-  <material name="Material.002">
-    <color rgba="0.13725 0.13725 0.13725 1.00000"/>
   </material>
 </robot>
