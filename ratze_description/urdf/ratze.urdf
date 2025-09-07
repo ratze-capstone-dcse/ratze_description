@@ -1,0 +1,188 @@
+<robot name="ratze" version="1.0">
+  <joint name="base_link_joint" type="fixed">
+    <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 0.00000 0.00000"/>
+    <parent link="base_link"/>
+    <child link="base_joint"/>
+  </joint>
+  <joint name="motor_2_joint" type="continuous">
+    <limit effort="0.00000" velocity="0.00000"/>
+    <origin rpy="0.00000 0.00000 0.00000" xyz="0.07687 0.11040 0.02150"/>
+    <parent link="base_joint"/>
+    <child link="motor_2"/>
+    <axis xyz="0.00000 1.00000 0.00000"/>
+  </joint>
+  <joint name="ray_6" type="fixed">
+    <origin rpy="0.00000 0.00000 1.04720" xyz="0.11600 0.05959 0.07143"/>
+    <parent link="base_joint"/>
+    <child link="ray_6_link"/>
+  </joint>
+  <joint name="ray_7" type="fixed">
+    <origin rpy="0.00000 0.00000 1.57080" xyz="0.08072 0.06952 0.07143"/>
+    <parent link="base_joint"/>
+    <child link="ray_7_link"/>
+  </joint>
+  <joint name="motor_3_joint" type="continuous">
+    <limit effort="0.00000" velocity="0.00000"/>
+    <origin rpy="0.00000 0.00000 0.00000" xyz="-0.07688 0.11039 0.02150"/>
+    <parent link="base_joint"/>
+    <child link="motor_3"/>
+    <axis xyz="0.00000 1.00000 0.00000"/>
+  </joint>
+  <joint name="motor_4_joint" type="continuous">
+    <limit effort="0.00000" velocity="0.00000"/>
+    <origin rpy="0.00000 0.00000 0.00000" xyz="-0.07688 -0.11040 0.02149"/>
+    <parent link="base_joint"/>
+    <child link="motor_4"/>
+    <axis xyz="0.00000 -1.00000 0.00000"/>
+  </joint>
+  <joint name="motor_joint_1" type="continuous">
+    <limit effort="0.00000" velocity="0.00000"/>
+    <origin rpy="0.00000 0.00000 0.00000" xyz="0.07687 -0.11040 0.02149"/>
+    <parent link="base_joint"/>
+    <child link="motor_1"/>
+    <axis xyz="0.00000 -1.00000 0.00000"/>
+  </joint>
+  <joint name="ray_1" type="fixed">
+    <origin rpy="0.00000 0.00000 -1.57080" xyz="0.08177 -0.06874 0.07143"/>
+    <parent link="base_joint"/>
+    <child link="ray_1_link"/>
+  </joint>
+  <joint name="ray_2" type="fixed">
+    <origin rpy="0.00000 0.00000 -1.04720" xyz="0.11585 -0.05960 0.07143"/>
+    <parent link="base_joint"/>
+    <child link="ray_2_link"/>
+  </joint>
+  <joint name="ray_3" type="fixed">
+    <origin rpy="0.00000 0.00000 -0.52360" xyz="0.14198 -0.03445 0.07143"/>
+    <parent link="base_joint"/>
+    <child link="ray_3_link"/>
+  </joint>
+  <joint name="ray_4" type="fixed">
+    <origin rpy="0.00000 0.00000 0.00000" xyz="0.14891 -0.00000 0.07143"/>
+    <parent link="base_joint"/>
+    <child link="ray_4_link"/>
+  </joint>
+  <joint name="ray_5" type="fixed">
+    <origin rpy="0.00000 0.00000 0.52360" xyz="0.14058 0.03257 0.07143"/>
+    <parent link="base_joint"/>
+    <child link="ray_5_link"/>
+  </joint>
+  <link name="base_link">
+    <collision name="base_collision">
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.02306 0.00000 0.06275"/>
+      <geometry>
+        <box size="0.26612 0.18000 0.12550"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.00166" ixy="0.00000" ixz="-0.00000" iyy="0.00219" iyz="0.00000" izz="0.00256"/>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00284 0.00001 0.04705"/>
+      <mass value="0.50000"/>
+    </inertial>
+    <visual name="base">
+      <material name="Material.001"/>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+      <geometry>
+        <mesh filename="package://ratze_description/meshes/stl/base.stl" scale="1.00000 1.00000 1.00000"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="base_joint">
+    <sensor name="imu" type="imu">
+      <parent link="base_joint"/>
+    </sensor>
+  </link>
+  <link name="ray_5_link"/>
+  <link name="ray_6_link"/>
+  <link name="ray_7_link"/>
+  <link name="motor_2">
+    <collision name="wheel_2_collision">
+      <origin rpy="1.57080 0.00000 0.00000" xyz="0.00000 -0.00014 0.00000"/>
+      <geometry>
+        <cylinder radius="0.03400" length="0.03175"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.00003" ixy="0.00000" ixz="0.00000" iyy="0.00003" iyz="0.00000" izz="0.00003"/>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+      <mass value="0.05000"/>
+    </inertial>
+    <visual name="wheel_2">
+      <material name="Material.002"/>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+      <geometry>
+        <mesh filename="package://ratze_description/meshes/stl/wheel_2.stl" scale="1.00000 1.00000 1.00000"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="motor_3">
+    <collision name="wheel_3_collision">
+      <origin rpy="1.57080 0.00000 0.00000" xyz="0.00000 -0.00014 0.00000"/>
+      <geometry>
+        <cylinder radius="0.03400" length="0.03175"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.00003" ixy="0.00000" ixz="0.00000" iyy="0.00003" iyz="0.00000" izz="0.00003"/>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 0.00000 0.00000"/>
+      <mass value="0.05000"/>
+    </inertial>
+    <visual name="wheel_3">
+      <material name="Material.002"/>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+      <geometry>
+        <mesh filename="package://ratze_description/meshes/stl/wheel_3.stl" scale="1.00000 1.00000 1.00000"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="motor_4">
+    <collision name="wheel_4_collision">
+      <origin rpy="1.57080 0.00000 0.00000" xyz="0.00000 0.00014 0.00000"/>
+      <geometry>
+        <cylinder radius="0.03400" length="0.03175"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.00003" ixy="0.00000" ixz="0.00000" iyy="0.00003" iyz="0.00000" izz="0.00003"/>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 -0.00000 0.00000"/>
+      <mass value="0.05000"/>
+    </inertial>
+    <visual name="wheel_4">
+      <material name="Material.002"/>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+      <geometry>
+        <mesh filename="package://ratze_description/meshes/stl/wheel_4.stl" scale="1.00000 1.00000 1.00000"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="motor_1">
+    <collision name="wheel_1_collision">
+      <origin rpy="1.57080 0.00000 0.00000" xyz="0.00000 0.00014 0.00000"/>
+      <geometry>
+        <cylinder radius="0.03400" length="0.03175"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.00003" ixy="0.00000" ixz="0.00000" iyy="0.00003" iyz="0.00000" izz="0.00003"/>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+      <mass value="0.05000"/>
+    </inertial>
+    <visual name="wheel_1">
+      <material name="Material.002"/>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+      <geometry>
+        <mesh filename="package://ratze_description/meshes/stl/wheel_1.stl" scale="1.00000 1.00000 1.00000"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="ray_1_link"/>
+  <link name="ray_2_link"/>
+  <link name="ray_3_link"/>
+  <link name="ray_4_link"/>
+  <material name="Material.001">
+    <color rgba="0.45098 0.45098 0.45098 1.00000"/>
+  </material>
+  <material name="Material.002">
+    <color rgba="0.13725 0.13725 0.13725 1.00000"/>
+  </material>
+</robot>

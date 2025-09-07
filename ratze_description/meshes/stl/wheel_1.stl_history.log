@@ -1,0 +1,3 @@
+Instantiated with filepath=None->None, scale=[1.0, 1.0, 1.0], mesh=<bpy_struct, Mesh("wheel_1") at 0x72e4baead508>, meshname=wheel_1, material=None, mesh_orientation=None
+->trying export of <bpy_struct, Mesh("wheel_1") at 0x72e4baead508> to /home/lexciese/Documents/Blender/projects/ratze/meshes/stl/wheel_1.stl
+->wrote stl to /home/lexciese/Documents/Blender/projects/ratze/meshes/stl/wheel_1.stl from bpy_types.Mesh
